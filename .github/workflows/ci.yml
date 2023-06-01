@@ -8,8 +8,11 @@ on:
     - '*'
 
 jobs:
-  build:
+  build_and_release:
+    name: unionfs-fuse-static
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2
